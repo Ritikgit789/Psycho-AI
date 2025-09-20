@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color: whitesmoke;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#nav {
+    height: 120px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  #nav h1 {
+    font-size: 24px;
+    display: flex;
+    text-transform: capitalize ;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #nav-prt2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 40px;
+    gap: 30px;
+  }
+  
+  .nav-section {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #line{
+    width: 70px;
+    height: 3px;
+    background-color: black;
+  }
+  
+  #nav-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #logo {
+    height: 50px;
+    width: auto;
+  }
+  
+#content{
+    height: calc(100% - 140px);
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    position: relative;
+    justify-content: space-between ;
+}
+
+#left{
+    width: 36%;
+    height: 100%;
+    /* background-color: red; */
+    padding: 160px 100px;
+
+}
+
+#right{
+    width: 36%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+#center{
+    width: 26%;
+    height: 100%;
+    /* background-color: pink;  */
+    padding-top: 50px;
+
+}
+
+#left h1{
+    font-size: 39px;
+    line-height: 55px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom:20px;
+
+}
+
+#left h1 span{
+    color: #4CAF50;
+    font-family: 'Satisfy', cursive;
+    font-weight: 500;
+}
+
+#left p{
+    margin-bottom: 35px;
+    font-size: 18px;
+    width: 80%;
+    line-height: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#left button{
+    background-color: #2d8b30;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+}
+
+#left button i{
+    margin-right: 10px;
+
+}
+
+#center-bg{
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1000px ;
+    border-top-left-radius: 1000px ;
+    border-top-right-radius: 1000px;
+    background-image: url(https://st2.depositphotos.com/2890953/49742/i/450/depositphotos_497425930-stock-photo-mental-health-text-notepad-surrounded.jpg);
+    background-size: 90%;
+    background-position: 40% 50%;
+    filter: blur(2px);
+}
+
+#content>img{
+    height: 100%;
+    position: absolute;
+    left: 51%;
+    transform: translate(-49%, 0); 
+}
+
+
+
+#footer {
+    background-color: black;
+    padding: 60px 20px 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #footer-box {
+    background: rgba(255, 255, 255, 0.05); /* semi-transparent white box */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .footer-links {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: white;
+    text-shadow: 0 0 10px #fff;
+  }
+  
+  
+#footer p {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit; /* Keeps the text color consistent with surrounding text */
+  }
+  
+  a:hover {
+    color: #ff85a2; /* Optional: Add hover color for better UX */
+  }
+ 
+  
+  .assistant-btn {
+    background-color: #00c97f; /* Fresh green */
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .assistant-btn:hover {
+    background-color: #00b373;
+    transform: scale(1.05);
+  }
+  
+  #chat-ball {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #00c97f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.2s ease;
+  }
+  
+  #chat-ball:hover {
+    transform: scale(1.1);
+  }
+  
+  #chat-ball i {
+    font-size: 24px;
+  }
+  
