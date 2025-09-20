@@ -5,6 +5,8 @@ import numpy as np
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # Load environment variables (Google API Key)
 load_dotenv()
@@ -15,6 +17,14 @@ model = joblib.load("E:/Psycho AI/mental_health_model(LR).pkl")
 
 # Initialize FastAPI app
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or your frontend URL instead of "*"
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 AUTH_FILE = "auth.xlsx"
 

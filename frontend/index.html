@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psycho AI</title>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psycho AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div id="main">
-      <div id="nav">
-        <h1><i class="ri-menu-3-line"></i> Menu</h1>
-  
-        <div id="nav-prt2">
-          <div class="nav-section" id="nav-left">
-            <a href="index.html"></a><h5>Home</h5>
-            <!-- <h5>About</h5> -->
-            <a href="about.html"><h5>About</h5></a>
-            <a href="mailto:ritikmaity4@gmail.com"><h5>Contact</h5></a>
-          </div>
-  
-          <div id="nav-center">
-            <div class="line"></div>
-            <img src="logo.png" alt="Logo" id="logo">
-            <div class="line"></div>
-          </div>
-  
-          <div class="nav-section" id="nav-right">
-            <h5>Mental Health Predictor</h5>
-            <h5>Sign in</h5>
-            <button class="assistant-btn">Try Our Assistant</button>
-          </div>
-        </div>
-      </div>
+  <div id="main">
+    <div id="nav">
+      <h1><i class="ri-menu-3-line"></i> Menu</h1>
 
-      <div id="content">
-        <div id="left">
-            <h1>Smart support <span> for your peace</span> of mind. </h1>
-            <p>Your mental health matters. We’re here to support you with care, empathy, and tools to help you heal, grow, and thrive — one step at a time.</p>
-            <button><i class="ri-chat-ai-line"></i> - Chat with our Assistant</button>
+      <div id="nav-prt2">
+        <div class="nav-section" id="nav-left">
+          <a href="index.html"></a><h5>Home</h5>
+          <a href="about.html"><h5>About</h5></a>
+          <a href="mailto:ritikmaity4@gmail.com"><h5>Contact</h5></a>
         </div>
-        <div id="center">
-            <div id="center-bg"></div>
+
+        <div id="nav-center">
+          <div class="line"></div>
+          <img src="logo.png" alt="Logo" id="logo" />
+          <div class="line"></div>
         </div>
-        <div id="right"></div>
-        <img src="badge.png" alt="">
+
+        <div class="nav-section" id="nav-right">
+          <h5>Mental Health Predictor</h5>
+          <h5>Sign in</h5>
+          <button class="assistant-btn" id="open-chat-btn">Try Our Assistant</button>
+        </div>
       </div>
     </div>
 
-<!-- Add this just before the closing </body> tag -->
-<footer id="footer">
+    <div id="content">
+      <div id="left">
+        <h1>Smart support <span> for your peace</span> of mind. </h1>
+        <p>
+          Your mental health matters. We’re here to support you with care,
+          empathy, and tools to help you heal, grow, and thrive — one step at
+          a time.
+        </p>
+        <button id="open-chat-btn-2"><i class="ri-chat-ai-line"></i> - Chat with our Assistant</button>
+      </div>
+      <div id="center">
+        <div id="center-bg"></div>
+      </div>
+      <div id="right"></div>
+      <img src="badge.png" alt="" />
+    </div>
+
+    <!-- Mental Health Predictor Form -->
+    <section id="predictor" style="padding: 20px; max-width: 600px; margin: 20px auto; border: 1px solid #ccc;">
+      <h2>Mental Health Severity Predictor</h2>
+      <form id="predictor-form">
+        <!-- Add inputs for all required fields from backend -->
+        <label>Age: <input type="number" name="age" required /></label><br />
+        <label>Gender (0=Male,1=Female): <input type="number" name="gender" min="0" max="1" required /></label><br />
+        <label>Self Employed (0 or 1): <input type="number" name="self_employed" min="0" max="1" required /></label><br />
+        <label>Family History (0 or 1): <input type="number" name="family_history" min="0" max="1" required /></label><br />
+        <label>Work Interfere (0=Never, 1=Sometimes, 2=Often): <input type="number" name="work_interfere" min="0" max="2" required /></label><br />
+        <label>No Employees (number): <input type="number" name="no_employees" required /></label><br />
+        <label>Remote Work (0 or 1): <input type="number" name="remote_work" min="0" max="1" required /></label><br />
+        <label>Tech Company (0 or 1): <input type="number" name="tech_company" min="0" max="1" required /></label><br />
+        <label>Benefits (0 or 1): <input type="number" name="benefits" min="0" max="1" required /></label><br />
+        <label>Care Options (0 or 1): <input type="number" name="care_options" min="0" max="1" required /></label><br />
+        <label>Wellness Program (0 or 1): <input type="number" name="wellness_program" min="0" max="1" required /></label><br />
+        <label>Seek Help (0 or 1): <input type="number" name="seek_help" min="0" max="1" required /></label><br />
+        <label>Anonymity (0 or 1): <input type="number" name="anonymity" min="0" max="1" required /></label><br />
+        <label>Leave (0 or 1): <input type="number" name="leave" min="0" max="1" required /></label><br />
+        <label>Mental Health Consequence (0 or 1): <input type="number" name="mental_health_consequence" min="0" max="1" required /></label><br />
+        <label>Physical Health Consequence (0 or 1): <input type="number" name="phys_health_consequence" min="0" max="1" required /></label><br />
+        <label>Coworkers (0 or 1): <input type="number" name="coworkers" min="0" max="1" required /></label><br />
+        <label>Supervisor (0 or 1): <input type="number" name="supervisor" min="0" max="1" required /></label><br />
+        <label>Mental Health Interview (0 or 1): <input type="number" name="mental_health_interview" min="0" max="1" required /></label><br />
+        <label>Physical Health Interview (0 or 1): <input type="number" name="phys_health_interview" min="0" max="1" required /></label><br />
+        <label>Mental vs Physical (0 or 1): <input type="number" name="mental_vs_physical" min="0" max="1" required /></label><br />
+        <label>Obs Consequence (0 or 1): <input type="number" name="obs_consequence" min="0" max="1" required /></label><br />
+        <label>Obs Frequency (number): <input type="number" name="obs_frequency" required /></label><br />
+
+        <button type="submit">Predict Severity</button>
+      </form>
+      <div id="prediction-result" style="margin-top: 10px; white-space: pre-wrap;"></div>
+    </section>
+
+  </div>
+
+  <!-- Add this just before the closing </body> tag -->
+  <footer id="footer">
     <div class="footer-content">
       <div class="footer-links">
         <a href="mailto:ritikmaity4@gmail.com">Contact</a>
@@ -63,15 +98,75 @@
       </div>
       <p>© 2025 Psycho AI. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
-<!-- Quick Chat Ball -->
-<div id="chat-ball">
-  <i class="ri-chat-ai-fill"></i>
-</div>
+  <!-- Quick Chat Ball -->
+  <div id="chat-ball" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer; background: #4A90E2; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; color: white; font-size: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+    <i class="ri-chat-ai-fill"></i>
+  </div>
 
+  <!-- Chat Assistant Popup -->
+  <div id="chat-assistant" style="display:none; position: fixed; bottom: 90px; right: 20px; width: 350px; max-height: 500px; background: white; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.3); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="background: #4A90E2; color: white; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+      Mental Health Assistant
+      <button id="close-chat-btn" style="background:none; border:none; color:white; font-size: 20px; cursor: pointer;">&times;</button>
+    </div>
+    <div id="chat-messages" style="padding: 10px; flex-grow: 1; overflow-y: auto; font-size: 14px; line-height: 1.4;"></div>
+    <form id="chat-form" style="display:flex; border-top: 1px solid #ccc;">
+      <input type="text" id="chat-input" placeholder="Ask me anything about mental health..." style="flex-grow: 1; border:none; padding: 10px;" required />
+      <button type="submit" style="background:#4A90E2; color:white; border:none; padding: 10px 15px; cursor: pointer;">Send</button>
+    </form>
+  </div>
 
+  <script>
+    // Open chat popup
+    const chatBall = document.getElementById("chat-ball");
+    const chatAssistant = document.getElementById("chat-assistant");
+    const closeChatBtn = document.getElementById("close-chat-btn");
+    const chatMessages = document.getElementById("chat-messages");
+    const chatForm = document.getElementById("chat-form");
+    const chatInput = document.getElementById("chat-input");
 
+    chatBall.onclick = () => {
+      chatAssistant.style.display = "flex";
+      chatBall.style.display = "none";
+    };
+    closeChatBtn.onclick = () => {
+      chatAssistant.style.display = "none";
+      chatBall.style.display = "flex";
+    };
 
-</body>
-</html>
+    // Chat memory (optional, for client-side conversation)
+    let chatHistory = [];
+
+    chatForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message) return;
+      appendMessage("You", message);
+      chatInput.value = "";
+
+      // Call backend chatbot endpoint
+      try {
+        const response = await fetch("http://127.0.0.1:8000/chatbot/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message }),
+        });
+        const data = await response.json();
+        appendMessage("Assistant", data.response);
+      } catch (err) {
+        appendMessage("Assistant", "Sorry, I am unable to respond now.");
+      }
+    });
+
+    function appendMessage(sender, text) {
+    const div = document.createElement("div");
+    div.classList.add("message");
+    div.classList.add(sender.toLowerCase()); // e.g. "assistant" ya "user"
+    div.textContent = `${sender}: ${text}`;
+    document.getElementById("chat-container").appendChild(div);
+    // Scroll chat to bottom (optional)
+    div.scrollIntoView({ behavior: "smooth" });
+}
+
